@@ -1,17 +1,9 @@
 /* eslint-disable react/react-in-jsx-scope */
-import {
-  Text,
-  Button,
-  StyleSheet,
-  ImageBackground,
-  View,
-  Dimensions,
-  StatusBar,
-} from 'react-native';
+import {StyleSheet, ImageBackground, View, Image, Text} from 'react-native';
 import {RootStackParamList} from '../../navigation/AppNavigator';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {CardForecast} from '../../components/cards/Cards';
+import House from '../../../assets/icons/House.png';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
 
@@ -24,7 +16,9 @@ export const HomeScreen: React.FC<Props> = ({navigation}) => {
         resizeMethod="resize"
         style={styles.imgBg}>
         <View style={styles.content}>
-          <Text style={styles.title}>Bienvenido a la Home Screen</Text>
+          <Text style={styles.title}>Montreal</Text>
+          <Image source={House} />
+          {/* <Text style={styles.title}>Bienvenido a la Home Screen</Text> */}
           {/* <Button
             title="Ir a Detalles"
             onPress={() =>
@@ -34,7 +28,6 @@ export const HomeScreen: React.FC<Props> = ({navigation}) => {
               })
             }
           /> */}
-          <CardForecast />
         </View>
       </ImageBackground>
     </SafeAreaView>
