@@ -1,14 +1,14 @@
 import axios, {AxiosInstance, AxiosRequestConfig} from 'axios';
 
 const LOCAL_URL = '';
-const TOKEN = '';
+const TOKEN = 'adsasddsa';
 const instance: AxiosInstance = axios.create({
   baseURL: LOCAL_URL,
   timeout: 5000,
   headers: {
     'Content-Type': 'application/json',
     Accept: 'application/json',
-    Authorization: 'Bearer token',
+    Authorization: `Bearer ${TOKEN}`,
   },
 });
 
