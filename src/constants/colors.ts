@@ -17,7 +17,10 @@ type WeatherSchema = {
   };
 
   solid?: {
-    [key: string]: string;
+    darkPurple: string;
+    deepPurple: string;
+    vibrantPink: string;
+    lightLavender: string;
   };
 };
 
@@ -52,7 +55,8 @@ export const WeatherColors: WeatherSchema = {
   },
 
   solid: {
-    darkPurple: '#48319D',
+    // darkPurple: '#48319D',
+    darkPurple: 'rgba(72, 49, 157, 0.2)',
     deepPurple: '#1F1D47',
     vibrantPink: '#C427FB',
     lightLavender: '#E0D9FF',

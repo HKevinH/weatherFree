@@ -11,6 +11,7 @@ import {
 import {RootStackParamList} from '../../navigation/AppNavigator';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import {CardForecast} from '../../components/cards/Cards';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
 
@@ -24,7 +25,7 @@ export const HomeScreen: React.FC<Props> = ({navigation}) => {
         style={styles.imgBg}>
         <View style={styles.content}>
           <Text style={styles.title}>Bienvenido a la Home Screen</Text>
-          <Button
+          {/* <Button
             title="Ir a Detalles"
             onPress={() =>
               navigation.navigate('Details', {
@@ -32,7 +33,8 @@ export const HomeScreen: React.FC<Props> = ({navigation}) => {
                 message: 'Hola desde Home!',
               })
             }
-          />
+          /> */}
+          <CardForecast />
         </View>
       </ImageBackground>
     </SafeAreaView>
@@ -51,7 +53,7 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   content: {
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    // backgroundColor: 'rgba(0, 0, 0, 0.5)',
     padding: 20,
     borderRadius: 10,
   },
